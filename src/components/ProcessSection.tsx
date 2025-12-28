@@ -29,7 +29,7 @@ export default function ProcessSection() {
             {steps.map((step, index) => (
               <StaggerItem key={index}>
                 <div className="flex items-start gap-6 p-6 bg-white rounded-lg border border-gray-200 hover:-translate-y-0.5 transition-transform duration-200">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-accent-warm/10 flex items-center justify-center">
                     <span className="text-lg font-semibold text-accent-warm">
                       {index + 1}
                     </span>
