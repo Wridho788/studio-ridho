@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // Pattern A: Text + Ambient Visual
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden bg-gradient-to-br from-[#191726] via-[#2D2945] to-[#191726]">
+    <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden bg-linear-to-br from-[#191726] via-deep-secondary to-[#191726]">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Grid Pattern */}
@@ -26,7 +26,7 @@ export default function HeroSection() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-150 h-150 rounded-full blur-3xl"
           style={{
             background: "radial-gradient(circle, #FF8800 0%, transparent 70%)",
           }}
@@ -42,7 +42,7 @@ export default function HeroSection() {
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute -bottom-40 -left-40 w-[700px] h-[700px] rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-175 h-175 rounded-full blur-3xl"
           style={{
             background: "radial-gradient(circle, #6D7CFF 0%, transparent 70%)",
           }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-6"
         >
-          <span className="inline-block px-4 py-2 bg-[#FF8800]/10 border border-[#FF8800]/20 rounded-full text-[#FF8800] text-sm font-medium backdrop-blur-sm">
+          <span className="inline-block px-4 py-2 bg-accent-warm/10 border border-accent-warm/20 rounded-full text-accent-warm text-sm font-medium backdrop-blur-sm">
             ✨ Digital Product Builder
           </span>
         </motion.div>
@@ -90,7 +90,7 @@ export default function HeroSection() {
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight"
         >
           Membantu bisnis tampil{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF8800] to-[#ffb347]">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-accent-warm to-[#ffb347]">
             profesional
           </span>
           {" "}dan siap bertumbuh
@@ -116,7 +116,7 @@ export default function HeroSection() {
             href="https://wa.me/6281234567890"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-[#FF8800] to-[#ff9933] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#FF8800]/50 w-full sm:w-auto"
+            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-linear-to-r from-accent-warm to-accent-hover rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent-warm/50 w-full sm:w-auto"
           >
             <span className="relative z-10 flex items-center gap-2">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default function HeroSection() {
               </svg>
               Diskusi Singkat via WhatsApp
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff9933] to-[#FF8800] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-linear-to-r from-accent-hover to-accent-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
           
           <a
