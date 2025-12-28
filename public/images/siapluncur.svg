@@ -1,0 +1,11 @@
+<svg width="600" height="450" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="450" fill="#EDEDED"/>
+  <rect x="50" y="50" width="500" height="350" rx="8" fill="white"/>
+  <rect x="70" y="70" width="460" height="40" rx="4" fill="#191726"/>
+  <rect x="70" y="130" width="220" height="120" rx="4" fill="#FF8800" fill-opacity="0.1"/>
+  <rect x="310" y="130" width="220" height="120" rx="4" fill="#2D2945" fill-opacity="0.1"/>
+  <rect x="70" y="270" width="460" height="20" rx="4" fill="#191726" fill-opacity="0.1"/>
+  <rect x="70" y="310" width="460" height="20" rx="4" fill="#191726" fill-opacity="0.05"/>
+  <rect x="70" y="350" width="200" height="30" rx="4" fill="#FF8800"/>
+  <text x="300" y="230" font-family="Arial" font-size="24" fill="#191726" text-anchor="middle">SiapLuncur</text>
+</svg>

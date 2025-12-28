@@ -1,6 +1,8 @@
 "use client";
 
-import { FadeUpSoft, StaggerContainer, StaggerItem } from "./MotionWrapper";
+import Section from "./Section";
+import { StaggerContainer, StaggerItem } from "./MotionWrapper";
+import { motion } from "framer-motion";
 
 const services = [
   "Website bisnis & landing page",
@@ -11,14 +13,18 @@ const services = [
 
 export default function ExpertiseSection() {
   return (
-    <section id="expertise" className="py-24 px-6 md:px-8 bg-neutral-bg/50">
+    <Section id="expertise" bgColor="bg-neutral-bg/50">
       <div className="max-w-4xl mx-auto">
-        <FadeUpSoft>
-          <h2 className="text-3xl md:text-4xl font-semibold text-deep-primary mb-12">
-            Yang Saya Bantu
-          </h2>
-        </FadeUpSoft>
-        
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-3xl md:text-4xl font-semibold text-deep-primary mb-12"
+        >
+          Yang Saya Bantu
+        </motion.h2>
+
         <StaggerContainer>
           <div className="grid gap-4 md:gap-6">
             {services.map((service, index) => (
@@ -33,13 +39,18 @@ export default function ExpertiseSection() {
             ))}
           </div>
         </StaggerContainer>
-        
-        <FadeUpSoft delay={0.3}>
-          <p className="mt-8 text-lg text-text-secondary text-center max-w-2xl mx-auto">
-            Setiap solusi saya rancang agar mudah digunakan, cepat online, dan relevan untuk kebutuhan bisnis.
-          </p>
-        </FadeUpSoft>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-8 text-lg text-text-secondary text-center max-w-2xl mx-auto"
+        >
+          Setiap solusi saya rancang agar mudah digunakan, cepat online, dan
+          relevan untuk kebutuhan bisnis.
+        </motion.p>
       </div>
-    </section>
+    </Section>
   );
 }

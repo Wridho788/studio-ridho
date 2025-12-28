@@ -5,6 +5,7 @@ import WorkSection from "@/components/WorkSection";
 import ProcessSection from "@/components/ProcessSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import VisualBreak from "@/components/VisualBreak";
 
 export default function Home() {
   return (
@@ -12,8 +13,10 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ExpertiseSection />
+      <VisualBreak height="medium" />
       <WorkSection />
       <ProcessSection />
+      <VisualBreak height="small" />
       <CTASection />
       <Footer />
     </main>

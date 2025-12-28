@@ -1,0 +1,12 @@
+<svg width="600" height="450" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="450" fill="#EDEDED"/>
+  <rect x="50" y="50" width="500" height="350" rx="8" fill="white"/>
+  <circle cx="150" cy="120" r="40" fill="#2D2945" fill-opacity="0.1"/>
+  <rect x="210" y="90" width="320" height="20" rx="4" fill="#191726"/>
+  <rect x="210" y="120" width="220" height="15" rx="4" fill="#191726" fill-opacity="0.3"/>
+  <rect x="70" y="180" width="460" height="100" rx="4" fill="#FF8800" fill-opacity="0.05"/>
+  <rect x="90" y="200" width="180" height="60" rx="4" fill="#2D2945" fill-opacity="0.1"/>
+  <rect x="290" y="200" width="180" height="60" rx="4" fill="#2D2945" fill-opacity="0.1"/>
+  <rect x="70" y="310" width="150" height="40" rx="4" fill="#FF8800"/>
+  <text x="300" y="375" font-family="Arial" font-size="24" fill="#191726" text-anchor="middle">LapakBenz</text>
+</svg>
