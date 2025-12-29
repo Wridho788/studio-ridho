@@ -1,9 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 // Pattern A: Text + Ambient Visual
 export default function HeroSection() {
+  const [particles, setParticles] = useState<Array<{ left: string; top: string; delay: number; duration: number }>>([]);
+
+  useEffect(() => {
+    // Generate particles on client-side only to avoid hydration mismatch
+    setParticles(
+      [...Array(20)].map(() => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        delay: Math.random() * 2,
+        duration: 3 + Math.random() * 2,
+      }))
+    );
+  }, []);
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden bg-linear-to-br from-[#191726] via-deep-secondary to-[#191726]">
       {/* Animated Background Elements */}
@@ -49,22 +63,22 @@ export default function HeroSection() {
         />
         
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: particle.left,
+              top: particle.top,
             }}
             animate={{
               y: [0, -30, 0],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: particle.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: particle.delay,
             }}
           />
         ))}
@@ -100,7 +114,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed"
         >
           Website, landing page, dan produk digital yang rapi, cepat, dan mudah
           dipercaya pelanggan.
@@ -110,7 +124,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-2"
         >
           <a
             href="https://wa.me/6281234567890"
@@ -143,9 +157,9 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mt-16 pt-8 border-t border-white/10"
+          className="mt-20"
         >
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white mb-1">10+</div>
               <div className="text-sm text-gray-400">Projek Selesai</div>

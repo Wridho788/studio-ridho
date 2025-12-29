@@ -8,21 +8,21 @@ const projects = [
   {
     title: "SiapLuncur",
     description: "Membantu UMKM membuat landing page profesional agar bisa online dengan cepat dan rapi.",
-    image: "/images/siapluncur.svg",
+    image: "/images/siapluncur.png",
     tags: ["Landing Page", "UMKM", "Web Builder"],
     color: "from-blue-500 to-cyan-500",
   },
   {
     title: "LapakBenz",
     description: "Platform komunitas dan marketplace otomotif yang mendukung event serta penjualan produk UMKM.",
-    image: "/images/lapakbenz.svg",
+    image: "/images/lapakbenz.png",
     tags: ["Marketplace", "Komunitas", "E-commerce"],
     color: "from-purple-500 to-pink-500",
   },
   {
     title: "Internal Admin System",
     description: "Dashboard internal untuk mengelola produk, transaksi, dan operasional bisnis secara efisien.",
-    image: "/images/admin-system.svg",
+    image: "/images/adminpanel-lapakbenz.png",
     tags: ["Dashboard", "Admin Panel", "Management"],
     color: "from-orange-500 to-red-500",
   },
@@ -62,30 +62,26 @@ export default function WorkSection() {
           </motion.p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group"
             >
-              <div className="grid md:grid-cols-2 gap-8 items-center bg-linear-to-br from-gray-50 to-white rounded-3xl overflow-hidden border-2 border-gray-100 hover:border-accent-warm/30 hover:shadow-2xl transition-all duration-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center bg-linear-to-br from-gray-50 to-white rounded-3xl overflow-hidden border-2 border-gray-100 hover:border-accent-warm/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
                 {/* Image Section */}
                 <div className={`relative h-80 md:h-96 overflow-hidden ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                  <div className="absolute inset-0 bg-linear-to-br opacity-10 group-hover:opacity-20 transition-opacity duration-500" 
-                    style={{
-                      background: `linear-gradient(135deg, #FF8800 0%, #ff9933 100%)`
-                    }}
-                  />
+                  <div className="absolute inset-0 bg-linear-to-br from-accent-warm/5 to-accent-hover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative h-full flex items-center justify-center p-8">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-contain group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   
@@ -96,7 +92,7 @@ export default function WorkSection() {
 
                 {/* Content Section */}
                 <div className={`p-8 md:p-12 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
-                  <div className="inline-block px-3 py-1 bg-accent-warm/10 text-accent-warm text-xs font-semibold rounded-full mb-4">
+                  <div className="inline-block px-3 py-1 bg-accent-warm/10 text-accent-warm text-xs font-semibold rounded-full mb-4 group-hover:bg-accent-warm group-hover:text-white transition-all duration-300">
                     Project #{index + 1}
                   </div>
                   
@@ -109,15 +105,23 @@ export default function WorkSection() {
                   </p>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-white border border-gray-200 text-gray-700 text-sm rounded-lg hover:border-accent-warm/50 hover:text-accent-warm transition-colors duration-200"
+                        className="px-3 py-1.5 bg-white border border-gray-200 text-gray-700 text-sm rounded-lg hover:border-accent-warm/50 hover:text-accent-warm hover:scale-105 transition-all duration-200"
                       >
                         {tag}
                       </span>
                     ))}
+                  </div>
+
+                  {/* View Project Link */}
+                  <div className="flex items-center gap-2 text-accent-warm font-semibold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <span>Lihat Detail</span>
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </div>
                 </div>
               </div>

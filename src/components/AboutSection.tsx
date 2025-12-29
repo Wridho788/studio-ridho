@@ -2,75 +2,154 @@
 
 import Section from "./Section";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <Section id="about" bgColor="bg-white">
-      <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Visual Element */}
+    <Section id="about" bgColor="bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block px-4 py-2 bg-accent-warm/10 text-accent-warm rounded-full text-sm font-semibold mb-4">
+            Kenali Saya Lebih Dekat
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#191726] mb-4">
+            Tentang Saya
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Membangun solusi digital yang bermakna untuk bisnis lokal
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-5 gap-12 items-start">
+          {/* Left: Image & Profile Card */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="lg:col-span-2"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-linier-to-br from-[#191726] to-deep-secondary p-12 h-100 flex items-center justify-center">
-              <div className="absolute inset-0 opacity-10" style={{
-                backgroundImage: `linear-gradient(45deg, #FF8800 25%, transparent 25%),
-                                 linear-gradient(-45deg, #FF8800 25%, transparent 25%),
-                                 linear-gradient(45deg, transparent 75%, #FF8800 75%),
-                                 linear-gradient(-45deg, transparent 75%, #FF8800 75%)`,
-                backgroundSize: '40px 40px',
-                backgroundPosition: '0 0, 0 20px, 20px -20px, -20px 0px'
-              }} />
-              <div className="relative z-10 text-center">
-                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-linier-to-br from-accent-warm to-accent-hover flex items-center justify-center text-white text-5xl font-bold shadow-2xl">
-                  R
+            {/* Main Image */}
+            <div className="relative mb-6 group">
+              <div className="absolute -inset-4 bg-linear-to-r from-accent-warm to-[#ff6600] rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5">
+                <div className="aspect-4/5 relative bg-linear-to-br from-[#191726] to-[#2d2840]">
+                  <Image
+                    src="/images/profile.jpeg"
+                    alt="Ridho - Digital Product Builder"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Ridho</h3>
-                <p className="text-gray-300">Digital Product Builder</p>
               </div>
+            </div>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="group bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:scale-105 hover:border-accent-warm/40 transition-all duration-300 cursor-pointer"
+              >
+                <div className="text-3xl font-bold bg-linear-to-r from-accent-warm to-[#ff6600] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                  5+
+                </div>
+                <div className="text-sm text-gray-600 font-medium group-hover:text-accent-warm transition-colors duration-300">Tahun Pengalaman</div>
+              </motion.div>
               
-              {/* Decorative elements */}
-              <div className="absolute top-6 right-6 w-20 h-20 border-2 border-accent-warm/30 rounded-lg rotate-12" />
-              <div className="absolute bottom-6 left-6 w-16 h-16 bg-accent-warm/10 rounded-full" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="group bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:scale-105 hover:border-accent-warm/40 transition-all duration-300 cursor-pointer"
+              >
+                <div className="text-3xl font-bold bg-linear-to-r from-[#191726] to-[#2d2840] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                  10+
+                </div>
+                <div className="text-sm text-gray-600 font-medium group-hover:text-[#191726] transition-colors duration-300">Projek Selesai</div>
+              </motion.div>
             </div>
           </motion.div>
 
-          {/* Right: Text Content */}
+          {/* Right: Content */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-3 space-y-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#191726] mb-6">
-              Tentang Saya
-            </h2>
-            <div className="space-y-5 text-base md:text-lg text-gray-600 leading-relaxed">
-              <p className="relative pl-6 border-l-4 border-accent-warm">
-                Saya Ridho, digital product builder dengan fokus membantu bisnis dan
-                usaha lokal membangun kehadiran digital yang rapi dan profesional.
-              </p>
-              <p>
-                Saya terbiasa mengerjakan produk dari tahap awal—mulai dari struktur,
-                UI/UX, hingga implementasi—dengan pendekatan yang tenang, terukur, dan
-                berorientasi hasil.
-              </p>
+            {/* Introduction */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-accent-warm/30 transition-all duration-300">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-accent-warm to-[#ff6600] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#191726] mb-2">Ridho</h3>
+                  <p className="text-accent-warm font-semibold">Digital Product Builder</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Saya Ridho, digital product builder dengan fokus membantu bisnis dan
+                  usaha lokal membangun kehadiran digital yang rapi dan profesional.
+                </p>
+                <p>
+                  Saya terbiasa mengerjakan produk dari tahap awal—mulai dari struktur,
+                  UI/UX, hingga implementasi—dengan pendekatan yang tenang, terukur, dan
+                  berorientasi hasil.
+                </p>
+              </div>
             </div>
 
-            {/* Key Points */}
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="bg-linier-to-br from-accent-warm/5 to-accent-warm/10 p-4 rounded-xl border border-accent-warm/20">
-                <div className="text-2xl font-bold text-accent-warm mb-1">5+</div>
-                <div className="text-sm text-gray-600">Tahun Pengalaman</div>
-              </div>
-              <div className="bg-linier-to-br from-deep-secondary/5 to-deep-secondary/10 p-4 rounded-xl border border-deep-secondary/20">
-                <div className="text-2xl font-bold text-deep-secondary mb-1">10+</div>
-                <div className="text-sm text-gray-600">Projek Selesai</div>
-              </div>
+            {/* Skills/Approach */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="group bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-xl hover:border-accent-warm/30 hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-lg bg-accent-warm/10 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-accent-warm" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-[#191726] mb-2">Pendekatan Terstruktur</h4>
+                <p className="text-sm text-gray-600">Dari konsep hingga implementasi dengan metodologi yang jelas</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="group bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-xl hover:border-accent-warm/30 hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-lg bg-accent-warm/10 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-accent-warm" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-[#191726] mb-2">Hasil Optimal</h4>
+                <p className="text-sm text-gray-600">Fokus pada solusi yang efektif dan memberikan dampak nyata</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>

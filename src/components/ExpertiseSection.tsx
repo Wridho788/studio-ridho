@@ -65,22 +65,35 @@ export default function ExpertiseSection() {
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <StaggerItem key={index}>
-                <div className="group relative bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-accent-warm/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div className="group relative bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-accent-warm/40 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer overflow-hidden">
                   {/* Background Gradient on Hover */}
-                  <div className="absolute inset-0 bg-linear-to-br from-accent-warm/0 to-accent-warm/0 group-hover:from-accent-warm/5 group-hover:to-accent-hover/5 rounded-2xl transition-all duration-300" />
+                  <div className="absolute inset-0 bg-linears-to-br from-accent-warm/0 to-accent-warm/0 group-hover:from-accent-warm/5 group-hover:to-accent-hover/10 rounded-2xl transition-all duration-300" />
                   
                   <div className="relative">
-                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <div className="text-5xl mb-5 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">{service.icon}</div>
                     <h3 className="text-xl font-bold text-[#191726] mb-3 group-hover:text-accent-warm transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed mb-4">
                       {service.description}
                     </p>
+                    
+                    {/* Additional Info - Shows on Hover */}
+                    <div className="flex items-center gap-2 text-accent-warm font-semibold text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                      <span>Pelajari lebih lanjut</span>
+                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
 
                   {/* Decorative Corner */}
-                  <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-accent-warm/0 group-hover:border-accent-warm/30 rounded-tr-lg transition-all duration-300" />
+                  <div className="absolute top-4 right-4 w-10 h-10 border-t-2 border-r-2 border-accent-warm/0 group-hover:border-accent-warm/50 rounded-tr-lg transition-all duration-300 group-hover:scale-110" />
+                  
+                  {/* Animated Border Effect */}
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-linears-to-r from-transparent via-accent-warm to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  </div>
                 </div>
               </StaggerItem>
             ))}
