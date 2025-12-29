@@ -1,21 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --font-family-sora: var(--font-sora);
-  --font-family-inter: var(--font-inter);
-
-  --color-deep-primary: #191726;
-  --color-deep-secondary: #2D2945;
-  --color-accent-warm: #FF8800;
-  --color-accent-hover: #ff9933;
-  --color-neutral-bg: #f5f5f5;
-  --color-text-primary: #191726;
-  --color-text-secondary: #6b7280;
-  --color-border: #e5e7eb;
-  
-  --color-surface: #ffffff;
-  --color-surface-elevated: #fafafa;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --deep-primary: #191726;
@@ -35,39 +20,36 @@
   --motion-easing: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
 
-body {
-  background: #ffffff;
-  color: var(--deep-primary);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-}
+  body {
+    @apply bg-white text-deep-primary;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sora), system-ui, sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--deep-primary);
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sora), system-ui, sans-serif;
+    @apply font-semibold text-deep-primary;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
 
-/* Focus styles for accessibility */
-*:focus-visible {
-  outline: 2px solid var(--accent-warm);
-  outline-offset: 2px;
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-accent-warm outline-offset-2;
+  }
 }
 
 /* Reduced motion support */
@@ -87,8 +69,7 @@ html {
 
 /* Selection color */
 ::selection {
-  background-color: var(--accent-warm);
-  color: white;
+  @apply bg-accent-warm text-white;
 }
 
 /* Custom scrollbar */
@@ -97,14 +78,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--neutral-bg);
+  @apply bg-neutral-bg;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--deep-secondary);
-  border-radius: 4px;
+  @apply bg-deep-secondary rounded;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--deep-primary);
+  @apply bg-deep-primary;
 }
