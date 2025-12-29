@@ -6,7 +6,7 @@ export default function CTASection() {
   return (
     <section id="contact" className="relative py-24 md:py-32 px-6 md:px-12 overflow-hidden">
       {/* Animated Background with Gradient */}
-      <div className="absolute inset-0 bg-linear-to-br from-[#191726] via-deep-secondary to-[#191726]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#191726] via-deep-secondary to-[#191726]">
         {/* Grid Pattern Overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: `linear-gradient(to right, #fff 1px, transparent 1px),
@@ -70,7 +70,7 @@ export default function CTASection() {
         >
           Siap Membawa Bisnis Anda
           <br />
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-accent-warm to-[#ffb347]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-warm to-[#ffb347]">
             ke Level Berikutnya?
           </span>
         </motion.h2>
@@ -97,7 +97,7 @@ export default function CTASection() {
             href="https://wa.me/6281234567890"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-semibold text-white bg-linear-to-r from-accent-warm to-accent-hover rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent-warm/50 w-full sm:w-auto"
+            className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-semibold text-white bg-gradient-to-r from-accent-warm to-accent-hover rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent-warm/50 w-full sm:w-auto"
           >
             <span className="relative z-10 flex items-center gap-2">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export default function CTASection() {
               </svg>
               Mulai Diskusi Sekarang
             </span>
-            <div className="absolute inset-0 bg-linear-to-r from-accent-hover to-accent-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-hover to-accent-warm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
 
           <a

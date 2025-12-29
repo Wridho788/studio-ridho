@@ -10,7 +10,7 @@ interface VisualBreakProps {
 
 export default function VisualBreak({}: VisualBreakProps) {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden bg-linear-to-br from-[#191726] via-deep-secondary to-[#191726]">
+    <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-[#191726] via-deep-secondary to-[#191726]">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <motion.div
@@ -57,7 +57,7 @@ export default function VisualBreak({}: VisualBreakProps) {
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Dipercaya oleh{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-accent-warm to-[#ffb347]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-warm to-[#ffb347]">
               Berbagai Bisnis
             </span>
           </h2>
@@ -145,7 +145,7 @@ export default function VisualBreak({}: VisualBreakProps) {
               memahami kebutuhan kami dan memberikan solusi yang tepat."
             </p>
             <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-linear-to-br from-accent-warm to-accent-hover" />
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent-warm to-accent-hover" />
               <div className="text-left">
                 <p className="text-white font-semibold">Client Testimony</p>
                 <p className="text-gray-400 text-sm">Business Owner</p>

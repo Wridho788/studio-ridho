@@ -53,10 +53,10 @@ export default function ProcessSection() {
                   className="group relative flex items-start gap-6 p-8 bg-white rounded-2xl border-2 border-gray-100 hover:border-accent-warm/40 hover:shadow-2xl transition-all duration-300 overflow-hidden"
                 >
                   {/* Background Effect */}
-                  <div className="absolute inset-0 bg-linear-to-r from-accent-warm/0 to-accent-warm/0 group-hover:from-accent-warm/5 group-hover:to-transparent transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/0 to-accent-warm/0 group-hover:from-accent-warm/5 group-hover:to-transparent transition-all duration-300" />
                   
                   {/* Number Circle */}
-                  <div className="relative shrink-0 w-16 h-16 rounded-2xl bg-linear-to-br from-accent-warm/10 to-accent-hover/10 flex items-center justify-center border-2 border-accent-warm/20 group-hover:border-accent-warm/50 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <div className="relative shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-warm/10 to-accent-hover/10 flex items-center justify-center border-2 border-accent-warm/20 group-hover:border-accent-warm/50 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     <span className="text-2xl font-bold text-accent-warm">
                       {index + 1}
                     </span>
@@ -97,7 +97,7 @@ export default function ProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 bg-linear-to-br from-[#191726] to-[#2d2840] rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
+          className="mt-16 bg-gradient-to-br from-[#191726] to-[#2d2840] rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
         >
           {/* Background Effect */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent-warm/10 rounded-full blur-3xl" />

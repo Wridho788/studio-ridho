@@ -67,7 +67,7 @@ export default function ExpertiseSection() {
               <StaggerItem key={index}>
                 <div className="group relative bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-accent-warm/40 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer overflow-hidden">
                   {/* Background Gradient on Hover */}
-                  <div className="absolute inset-0 bg-linears-to-br from-accent-warm/0 to-accent-warm/0 group-hover:from-accent-warm/5 group-hover:to-accent-hover/10 rounded-2xl transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-warm/0 to-accent-warm/0 group-hover:from-accent-warm/5 group-hover:to-accent-hover/10 rounded-2xl transition-all duration-300" />
                   
                   <div className="relative">
                     <div className="text-5xl mb-5 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">{service.icon}</div>
@@ -92,7 +92,7 @@ export default function ExpertiseSection() {
                   
                   {/* Animated Border Effect */}
                   <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute top-0 left-0 w-full h-0.5 bg-linears-to-r from-transparent via-accent-warm to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-accent-warm to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                   </div>
                 </div>
               </StaggerItem>

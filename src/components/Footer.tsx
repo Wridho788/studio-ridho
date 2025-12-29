@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative py-16 px-6 md:px-8 bg-linear-to-b from-[#191726] to-[#0f0e1a] text-neutral-bg/80 overflow-hidden">
+    <footer className="relative py-16 px-6 md:px-8 bg-gradient-to-b from-[#191726] to-[#0f0e1a] text-neutral-bg/80 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `linear-gradient(to right, #fff 1px, transparent 1px),

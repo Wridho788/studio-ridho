@@ -38,9 +38,9 @@ export default function AboutSection() {
           >
             {/* Main Image */}
             <div className="relative mb-6 group">
-              <div className="absolute -inset-4 bg-linear-to-r from-accent-warm to-[#ff6600] rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent-warm to-[#ff6600] rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5">
-                <div className="aspect-4/5 relative bg-linear-to-br from-[#191726] to-[#2d2840]">
+                <div className="aspect-4/5 relative bg-gradient-to-br from-[#191726] to-[#2d2840]">
                   <Image
                     src="/images/profile.jpeg"
                     alt="Ridho - Digital Product Builder"
@@ -61,7 +61,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="group bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:scale-105 hover:border-accent-warm/40 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-3xl font-bold bg-linear-to-r from-accent-warm to-[#ff6600] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-accent-warm to-[#ff6600] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
                   5+
                 </div>
                 <div className="text-sm text-gray-600 font-medium group-hover:text-accent-warm transition-colors duration-300">Tahun Pengalaman</div>
@@ -74,7 +74,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="group bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:scale-105 hover:border-accent-warm/40 transition-all duration-300 cursor-pointer"
               >
-                <div className="text-3xl font-bold bg-linear-to-r from-[#191726] to-[#2d2840] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl font-bold bg-gradient-to-r from-[#191726] to-[#2d2840] bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
                   10+
                 </div>
                 <div className="text-sm text-gray-600 font-medium group-hover:text-[#191726] transition-colors duration-300">Projek Selesai</div>
@@ -93,7 +93,7 @@ export default function AboutSection() {
             {/* Introduction */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-accent-warm/30 transition-all duration-300">
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-accent-warm to-[#ff6600] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-warm to-[#ff6600] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>

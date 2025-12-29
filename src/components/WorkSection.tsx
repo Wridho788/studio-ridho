@@ -72,10 +72,10 @@ export default function WorkSection() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group"
             >
-              <div className="grid md:grid-cols-2 gap-8 items-center bg-linear-to-br from-gray-50 to-white rounded-3xl overflow-hidden border-2 border-gray-100 hover:border-accent-warm/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+              <div className="grid md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-gray-50 to-white rounded-3xl overflow-hidden border-2 border-gray-100 hover:border-accent-warm/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
                 {/* Image Section */}
                 <div className={`relative h-80 md:h-96 overflow-hidden ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
-                  <div className="absolute inset-0 bg-linear-to-br from-accent-warm/5 to-accent-hover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-warm/5 to-accent-hover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative h-full flex items-center justify-center p-8">
                     <Image
                       src={project.image}
@@ -87,7 +87,7 @@ export default function WorkSection() {
                   
                   {/* Decorative Elements */}
                   <div className="absolute top-6 left-6 w-16 h-16 border-2 border-accent-warm/20 rounded-lg rotate-12 group-hover:rotate-45 transition-transform duration-500" />
-                  <div className="absolute bottom-6 right-6 w-20 h-20 bg-linear-to-br from-accent-warm/10 to-accent-hover/10 rounded-full group-hover:scale-150 transition-transform duration-500" />
+                  <div className="absolute bottom-6 right-6 w-20 h-20 bg-gradient-to-br from-accent-warm/10 to-accent-hover/10 rounded-full group-hover:scale-150 transition-transform duration-500" />
                 </div>
 
                 {/* Content Section */}
