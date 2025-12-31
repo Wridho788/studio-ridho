@@ -34,19 +34,20 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 w-full"
           >
             {/* Main Image */}
-            <div className="relative mb-6 group">
+            <div className="relative mb-6 group w-full max-w-md mx-auto lg:max-w-none">
               <div className="absolute -inset-4 bg-gradient-to-r from-accent-warm to-[#ff6600] rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5">
-                <div className="aspect-4/5 relative bg-gradient-to-br from-[#191726] to-[#2d2840]">
+                <div className="aspect-[4/5] relative bg-gradient-to-br from-[#191726] to-[#2d2840] w-full">
                   <Image
                     src="/images/profile.jpeg"
                     alt="Ridho - Digital Product Builder"
                     fill
                     className="object-cover"
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
               </div>

@@ -81,7 +81,7 @@ export default function WorkSection() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   

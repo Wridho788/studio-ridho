@@ -94,7 +94,7 @@ export default function CTASection() {
           className="flex flex-col sm:flex-row gap-5 justify-center items-center"
         >
           <a
-            href="https://wa.me/6281234567890"
+            href="https://wa.me/6285158781399"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-semibold text-white bg-gradient-to-r from-accent-warm to-accent-hover rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent-warm/50 w-full sm:w-auto"
@@ -109,7 +109,7 @@ export default function CTASection() {
           </a>
 
           <a
-            href="mailto:contact@ravatech.id"
+            href="mailto:wridho246@gmail.com"
             className="group inline-flex items-center justify-center px-10 py-5 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl hover:bg-white/20 hover:border-white/40 transition-all duration-300 w-full sm:w-auto"
           >
             <svg className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,18 +129,18 @@ export default function CTASection() {
         >
           <p className="text-gray-400 text-sm mb-5">Atau hubungi saya di:</p>
           <div className="flex flex-wrap justify-center gap-6 text-gray-300">
-            <a href="mailto:contact@ravatech.id" className="hover:text-accent-warm transition-colors flex items-center gap-2 group">
+            <a href="mailto:wridho246@gmail.com" className="hover:text-accent-warm transition-colors flex items-center gap-2 group">
               <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              contact@ravatech.id
+              wridho246@gmail.com
             </a>
             <span className="text-gray-600">•</span>
-            <a href="tel:+6281234567890" className="hover:text-accent-warm transition-colors flex items-center gap-2 group">
+            <a href="tel:+6285158781399" className="hover:text-accent-warm transition-colors flex items-center gap-2 group">
               <svg className="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              +62 812-3456-7890
+              +62 851-5878-1399
             </a>
           </div>
         </motion.div>

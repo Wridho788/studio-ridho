@@ -16,7 +16,7 @@ export default function Home() {
       <VisualBreak height="medium" />
       <WorkSection />
       <ProcessSection />
-      <VisualBreak height="small" />
+      {/* <VisualBreak height="small" /> */}
       <CTASection />
       <Footer />
     </main>
