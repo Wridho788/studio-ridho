@@ -31,7 +31,7 @@ const projects = [
 export default function WorkSection() {
   return (
     <Section id="work" bgColor="bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -47,7 +47,7 @@ export default function WorkSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold text-[#191726] mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#191726] mb-4"
           >
             Selected Work
           </motion.h2>
@@ -56,13 +56,72 @@ export default function WorkSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto"
           >
             Beberapa projek yang telah saya kerjakan untuk berbagai klien
           </motion.p>
         </div>
 
-        <div className="space-y-12">
+        {/* Mobile: Grid layout, Desktop: Original layout */}
+        <div className="block md:hidden">
+          <div className="grid grid-cols-2 gap-4">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden border-2 border-gray-100 hover:border-accent-warm/40 hover:shadow-xl transition-all duration-500">
+                  {/* Image Section */}
+                  <div className="relative h-40 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent-warm/5 to-accent-hover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="relative h-full flex items-center justify-center p-4 bg-white">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-contain group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="p-4">
+                    <div className="inline-block px-2 py-0.5 bg-accent-warm/10 text-accent-warm text-[10px] font-semibold rounded-full mb-2 group-hover:bg-accent-warm group-hover:text-white transition-all duration-300">
+                      #{index + 1}
+                    </div>
+                    
+                    <h3 className="text-sm font-bold text-[#191726] mb-2 group-hover:text-accent-warm transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    
+                    <p className="text-xs text-gray-600 leading-relaxed mb-3 line-clamp-2">
+                      {project.description}
+                    </p>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-1">
+                      {project.tags.slice(0, 2).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-0.5 bg-white border border-gray-200 text-gray-700 text-[9px] rounded transition-all duration-200"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: Original layout */}
+        <div className="hidden md:block space-y-12">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -76,12 +135,12 @@ export default function WorkSection() {
                 {/* Image Section */}
                 <div className={`relative h-80 md:h-96 overflow-hidden ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}>
                   <div className="absolute inset-0 bg-gradient-to-br from-accent-warm/5 to-accent-hover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="relative h-full flex items-center justify-center p-8">
+                  <div className="relative h-full flex items-center justify-center p-8 bg-white">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   
